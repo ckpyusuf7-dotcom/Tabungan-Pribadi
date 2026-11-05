@@ -13,3 +13,4 @@ Ini adalah salinan mandiri untuk pengguna baru.
 Agar aplikasi pasangan tidak bercampur dengan aplikasi utama, buat repository GitHub baru (misalnya `Tabungan-Pribadi`) dan deploy ZIP ini di repository tersebut. Jangan upload ke repository `KeuanganSaya` milik aplikasi utama.
 
 Setelah GitHub Pages aktif, pasangan membuka URL Pages baru itu dari perangkatnya sendiri. Data disimpan di browser/perangkat masing-masing dan tidak otomatis tersinkron antarperangkat.
+Update deployment trigger
