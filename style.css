@@ -1,105 +1,26 @@
-*{box-sizing:border-box}
-:root{color-scheme:dark}
-body{margin:0;background:#081522;color:#e9edf5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.app{max-width:1000px;margin:auto;padding:18px 16px 48px}
-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
-h1,h2,h3{font-family:Georgia,serif}
-h1{font-size:27px;margin:0}
-header p,p{color:#8e9ab0}
-header p{margin:5px 0}
-.badge{width:90px;height:90px;flex:0 0 90px;border:2px dashed #f3ca42;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;color:#f3ca42;font-size:10px;letter-spacing:1px}
-.badge b{font-size:11px}
-.year-switch{display:flex;align-items:center;gap:10px;margin:14px 0 0}
-.year-switch label{font-size:11px;letter-spacing:1px;color:#8d9bb0;font-weight:700}
-.year-switch select{background:#142842;border:1px solid #2d4361;color:#e9edf5;border-radius:10px;padding:9px 14px;font-size:15px}
-nav{display:flex;gap:7px;overflow-x:auto;margin:25px 0 14px;padding-bottom:3px;scrollbar-width:none}
-nav::-webkit-scrollbar{display:none}
-nav button{flex:0 0 auto;background:#142842;border:1px solid #2d4361;color:#9eacc0;border-radius:22px;padding:10px 17px;font-size:13px;font-weight:700;min-width:76px}
-nav button.active{background:#f3c942;color:#101720;border-color:#f3c942}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.stats div,.panel{background:#142842;border:1px solid #29415f;border-radius:16px}
-.stats div{padding:14px;min-height:92px}
-.stats small{display:block;color:#8d9bb0;letter-spacing:1px;font-size:11px;line-height:1.35}
-.stats strong{display:block;margin-top:7px;font-size:16px;overflow-wrap:anywhere}
-.green{color:#4fca8a}.red{color:#ff7461}.purple{color:#a486e2}.gold{color:#f3c942}
-.panel{padding:15px;margin-top:15px;overflow:hidden}
-.panel h2{margin:0 0 11px;font-size:15px;letter-spacing:.7px;color:#9eacc0;text-transform:uppercase}
-.panel-title{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.edit-total{background:#f3c942;border:0;border-radius:8px;padding:8px 12px;font-weight:800;color:#15243a}
-.chart-legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:0 0 12px;color:#8998ad;font-size:11px}
-.chart-legend span{display:flex;align-items:center;gap:6px}
-.chart-legend i{display:inline-block;width:10px;height:10px}
-.legend-in{background:#4fca8a}.legend-out{background:#ff7461}.legend-sav{background:#a486e2}
-.chart{height:195px;display:flex;align-items:flex-end;gap:7px;min-width:0;padding:10px 3px 0;border-bottom:1px solid #304663;overflow-x:auto}
-.barset{height:100%;min-width:0;flex:1;display:flex;align-items:flex-end;justify-content:center;gap:3px;position:relative;padding-bottom:20px}
-.bar{width:8px;max-width:30%;border-radius:3px 3px 0 0}
-.bar.in{background:#4fca8a}.bar.out{background:#ff7461}.bar.sav{background:#a486e2}
-.monthlabel{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:9px;color:#8290a5;white-space:nowrap}
-.table-scroll{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;touch-action:pan-x pan-y;border-radius:8px}
-.table-scroll table{width:100%;border-collapse:collapse;min-width:700px}
-.table-hint{display:none;margin:9px 0 0;color:#8998ad;font-size:11px;font-style:italic}
-@media(max-width:700px){
- .app{padding:14px 14px 32px}
- h1{font-size:24px}
- header{gap:9px}
- header p{font-size:13px;line-height:1.35}
- .badge{width:70px;height:70px;flex-basis:70px;font-size:9px}
- .badge b{font-size:10px}
- .year-switch{margin-top:12px}
- .year-switch select{font-size:14px;padding:8px 12px}
- nav{margin:19px 0 12px;gap:7px}
- nav button{min-width:68px;padding:8px 13px;font-size:12px}
- .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
- .stats div{min-height:88px;padding:12px}
- .stats small{font-size:9px;letter-spacing:.8px}
- .stats strong{font-size:15px;margin-top:6px}
- .panel{margin-top:14px;padding:13px;border-radius:14px}
- .panel h2{font-size:14px;margin-bottom:10px}
- .panel-title{align-items:center}
- .edit-total{font-size:11px;padding:7px 9px}
- .chart-legend{font-size:10px;gap:12px}
- .chart{height:185px;gap:4px;padding-left:0;padding-right:0}
- .bar{width:6px}
- .monthlabel{font-size:8px}
- .table-scroll{width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y}
- .table-scroll table{min-width:660px}
- th{padding:8px 7px;font-size:10px}
- td{padding:7px;font-size:11px}
- form{grid-template-columns:1fr;gap:7px}
- input{padding:10px;font-size:14px}
- form button{min-height:40px;font-size:13px}
- .item{padding:9px 2px;font-size:13px}
- .item small{font-size:10px}
- footer button{font-size:11px;padding:8px 10px}
+*{box-sizing:border-box}body{margin:0;background:#081522;color:#e9edf5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.app{max-width:1000px;margin:auto;padding:25px 18px 60px}header{display:flex;justify-content:space-between;align-items:center}h1,h2,h3{font-family:Georgia,serif}h1{font-size:30px;margin:0}.header p,p{color:#8e9ab0}header p{margin:5px 0}.badge{width:90px;height:90px;border:2px dashed #f3ca42;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;color:#f3ca42;font-size:10px;letter-spacing:1px}.badge b{font-size:11px}nav{display:flex;gap:7px;overflow:auto;margin:25px 0 14px}nav button{background:#142842;border:1px solid #2d4361;color:#9eacc0;border-radius:18px;padding:7px 16px;font-weight:700}nav button.active{background:#f3c942;color:#101720;border-color:#f3c942}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stats div,.panel{background:#142842;border:1px solid #29415f;border-radius:12px}.stats div{padding:15px}.stats small{display:block;color:#8d9bb0;letter-spacing:1px}.stats strong{display:block;margin-top:8px;font-size:18px}.green{color:#4fca8a}.red{color:#ff7461}.purple{color:#a486e2}.gold{color:#f3c942}.panel{padding:16px;margin-top:16px;overflow:hidden}.panel h2{margin:0 0 13px;font-size:19px}.panel-title{display:flex;justify-content:space-between;align-items:center}.edit-total{background:#f3c942;border:0;border-radius:8px;padding:8px 12px;font-weight:800}.chart{height:190px;display:flex;align-items:end;gap:15px;min-width:700px;padding:15px 10px;border-bottom:1px solid #304663}.barset{height:100%;flex:1;display:flex;align-items:end;justify-content:center;gap:3px}.bar{width:8px;border-radius:3px 3px 0 0}.bar.in{background:#4fca8a}.bar.out{background:#ff7461}.bar.sav{background:#a486e2}.monthlabel{font-size:9px;color:#8290a5;margin-top:4px}.table-scroll{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;touch-action:pan-x pan-y} .table-scroll table{width:100%;border-collapse:collapse;min-width:760px}th{background:#f3c942;color:#101720;text-align:left;padding:8px;font-size:11px}td{padding:7px;border-bottom:1px solid #2a405c;font-size:12px}td:nth-child(3){color:#4fca8a}td:nth-child(4){color:#ff7461}td:nth-child(5){color:#a486e2}form{display:grid;grid-template-columns:1fr 1.5fr 1fr auto;gap:8px}input{background:#102039;border:1px solid #2b4160;color:#edf2fa;border-radius:9px;padding:12px}form button{background:#f3c942;border:0;border-radius:9px;font-weight:800}.hint{font-size:12px;font-style:italic}.item{display:flex;justify-content:space-between;border-top:1px solid #29415f;padding:12px 2px}.item small{display:block;color:#8996ab;margin-top:3px}.amount{font-weight:800}.income .amount{color:#4fca8a}.expense .amount{color:#ff7461}.saving .amount{color:#a486e2}.del{border:0;background:transparent;color:#ff7461;font-size:18px}footer{text-align:center;margin-top:25px}footer button{margin:4px;background:#101d30;border:1px solid #304562;color:#aeb9ca;border-radius:9px;padding:10px 14px}dialog{background:#102039;color:#fff;border:1px solid #304967;border-radius:14px;max-width:400px;width:calc(100% - 30px)}dialog input{width:100%;margin:8px 0}.actions{display:flex;justify-content:flex-end;gap:8px}.actions button{padding:9px 14px;border-radius:8px;border:1px solid #304562;background:#101d30;color:#fff}.actions button:last-child{background:#f3c942;color:#111}@media(max-width:700px){
+.app{padding:16px 14px 36px}
+h1{font-size:26px}
+.stats{grid-template-columns:1fr 1fr;gap:10px}
+.stats div{padding:13px;min-height:88px}
+.stats small{font-size:10px}
+.stats strong{font-size:16px}
+.panel{padding:14px;margin-top:14px}
+.panel h2{font-size:16px}
+.panel-title{gap:8px}
+.edit-total{font-size:12px;padding:7px 10px}
+nav{margin:20px 0 12px;gap:7px}
+nav button{padding:8px 13px;font-size:12px}
+.chart{height:180px;min-width:0;gap:6px;padding:12px 4px}
+form{grid-template-columns:1fr;gap:7px}
+input{padding:10px;font-size:14px}
+form button{height:42px;font-size:13px}
+.table-scroll table{min-width:700px}
+th{padding:8px;font-size:10px}
+td{padding:7px;font-size:11px}
+.item{padding:10px 2px}
 }
-@media(min-width:701px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
-
-/* Brand color enforcement: avoid iOS native black/blue form controls */
-input, select, textarea {
-  -webkit-appearance: none !important;
-  appearance: none !important;
-  background-color: #102039 !important;
-  color: #edf2fa !important;
-  border: 1px solid #2b4160 !important;
-  color-scheme: dark;
-}
-input::placeholder, textarea::placeholder { color: #8998ad !important; opacity: 1; }
-input[type="date"] { color-scheme: dark; }
-input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(.85); }
-form button, button[type="submit"] {
-  -webkit-appearance: none !important;
-  appearance: none !important;
-  background: #f3c942 !important;
-  background-color: #f3c942 !important;
-  color: #142842 !important;
-  border: 1px solid #e5b92e !important;
-  border-radius: 9px !important;
-  font-weight: 800 !important;
-  box-shadow: none !important;
-}
-.edit-total, nav button.active {
-  -webkit-appearance: none !important;
-  appearance: none !important;
-  background: #f3c942 !important;
-  color: #142842 !important;
-}
+input,select,textarea{-webkit-appearance:none;appearance:none;background:#102039;color:#edf2fa;border:1px solid #2b4160;color-scheme:dark}
+input::placeholder,textarea::placeholder{color:#8998ad;opacity:1}
+input[type=date]{color-scheme:dark}
+form button{background:#f3c942;color:#101720;border:0}
