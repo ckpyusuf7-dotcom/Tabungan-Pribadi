@@ -1,4 +1,4 @@
-const CACHE="tabungan-pribadi-pacar-exact-layout-v2";
+const CACHE="tabungan-pribadi-pacar-table-scroll-v3";
 const FILES=["./","./index.html","./style.css","./app.js","./manifest.json","./icon.svg"];
 self.addEventListener("install",event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)))});
 self.addEventListener("activate",event=>event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)));await self.clients.claim()})()));
