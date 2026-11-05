@@ -73,3 +73,33 @@ nav button.active{background:#f3c942;color:#101720;border-color:#f3c942}
  footer button{font-size:11px;padding:8px 10px}
 }
 @media(min-width:701px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Brand color enforcement: avoid iOS native black/blue form controls */
+input, select, textarea {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background-color: #102039 !important;
+  color: #edf2fa !important;
+  border: 1px solid #2b4160 !important;
+  color-scheme: dark;
+}
+input::placeholder, textarea::placeholder { color: #8998ad !important; opacity: 1; }
+input[type="date"] { color-scheme: dark; }
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(.85); }
+form button, button[type="submit"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background: #f3c942 !important;
+  background-color: #f3c942 !important;
+  color: #142842 !important;
+  border: 1px solid #e5b92e !important;
+  border-radius: 9px !important;
+  font-weight: 800 !important;
+  box-shadow: none !important;
+}
+.edit-total, nav button.active {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background: #f3c942 !important;
+  color: #142842 !important;
+}
