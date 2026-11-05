@@ -1,16 +1,27 @@
-# Tabungan Pribadi — Salinan Kosong 2026–2027
+# Tabungan Pribadi 2026–2027
 
-Ini adalah salinan mandiri untuk pengguna baru.
+Aplikasi PWA pencatatan pemasukan, pengeluaran, dan tabungan pribadi.
 
-- Database awal benar-benar kosong: tidak ada transaksi pemasukan, pengeluaran, atau tabungan.
-- Saldo awal 2026 = Rp0.
-- Pilihan tahun hanya 2026 dan 2027.
-- Saldo akhir 2026 otomatis menjadi saldo awal 2027 berdasarkan tabungan dikurangi pengeluaran.
-- Penyimpanan browser menggunakan key khusus `tabunganPribadiPacar2026_2027`, terpisah dari aplikasi utama `KeuanganSaya`.
-- Fitur tambah, edit, hapus, export, dan import backup tetap tersedia.
+## Isi awal
+- Data transaksi 2026 dan 2027 dimulai kosong.
+- `data-2026.json` adalah berkas data awal kosong (tidak berisi transaksi lama).
+- Data transaksi yang ditambahkan setelah aplikasi dibuka disimpan di penyimpanan browser/perangkat masing-masing.
+- Gunakan Export JSON untuk membuat backup sebelum mengganti perangkat atau menghapus data browser.
 
-## PENTING: Deploy terpisah
-Agar aplikasi pasangan tidak bercampur dengan aplikasi utama, buat repository GitHub baru (misalnya `Tabungan-Pribadi`) dan deploy ZIP ini di repository tersebut. Jangan upload ke repository `KeuanganSaya` milik aplikasi utama.
+## Fitur
+- Ringkasan pemasukan, pengeluaran, tabungan bulan ini, dan total tabungan.
+- Grafik 12 bulan dan ringkasan tahunan.
+- Pilihan tahun 2026 dan 2027.
+- Tabel ringkasan dapat digeser horizontal pada layar kecil.
+- Tambah, edit, dan hapus transaksi.
+- Export dan import backup JSON.
+- Total tabungan dapat disesuaikan manual.
 
-Setelah GitHub Pages aktif, pasangan membuka URL Pages baru itu dari perangkatnya sendiri. Data disimpan di browser/perangkat masing-masing dan tidak otomatis tersinkron antarperangkat.
-Update deployment trigger
+## Aturan saldo
+- Pemasukan dicatat terpisah dan tidak otomatis menambah tabungan.
+- Pengeluaran mengurangi total tabungan satu kali.
+- Tabungan/investasi menambah total tabungan.
+- Saat pertama kali membuka tahun 2027, saldo akhir 2026 menjadi saldo awal 2027.
+
+## Deploy GitHub Pages
+Unggah seluruh isi folder ini ke root repository, lalu tunggu workflow GitHub Pages selesai.

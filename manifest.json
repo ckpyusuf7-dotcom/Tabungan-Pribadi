@@ -1,16 +1,1 @@
-{
-  "name": "Tabungan Pribadi",
-  "short_name": "Tabungan",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#081522",
-  "theme_color": "#081522",
-  "lang": "id-ID",
-  "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
-  ]
-}
+{"name":"Tabungan Pribadi","short_name":"Tabungan","start_url":"./","display":"standalone","background_color":"#081827","theme_color":"#081827","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
